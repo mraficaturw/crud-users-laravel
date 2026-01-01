@@ -1,0 +1,102 @@
+@import 'tailwindcss';
+@tailwind components;
+@tailwind utilities;
+
+/* Alpine.js cloak - hide elements until Alpine is ready */
+[x-cloak] {
+    display: none !important;
+}
+
+@source '../../vendor/laravel/framework/src/Illuminate/Pagination/resources/views/*.blade.php';
+@source '../../storage/framework/views/*.php';
+@source '../**/*.blade.php';
+@source '../**/*.js';
+
+@theme {
+    --font-sans: 'Inter-sans', 'Inter', 'Instrument Sans', ui-sans-serif, system-ui, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji',
+        'Segoe UI Symbol', 'Noto Color Emoji';
+
+    /* Brand Colors */
+    --color-brand: #3b82f6;
+    /* Blue 500 */
+    --color-brand-soft: #bfdbfe;
+    /* Blue 200 */
+    --color-fg-brand: #2563eb;
+    /* Blue 600 */
+
+    /* Text Colors */
+    --color-heading: #111827;
+    /* Gray 900 */
+    --color-body: #6b7280;
+    /* Gray 500 */
+
+    /* Success Colors */
+    --color-success: #22c55e;
+    /* Green 500 */
+    --color-success-soft: #dcfce7;
+    /* Green 100 */
+    --color-success-subtle: #86efac;
+    /* Green 300 */
+    --color-fg-success-strong: #14532d;
+    /* Green 900 */
+
+    /* Danger Colors */
+    --color-danger: #ef4444;
+    /* Red 500 */
+    --color-danger-soft: #fee2e2;
+    /* Red 100 */
+    --color-danger-subtle: #fca5a5;
+    /* Red 300 */
+    --color-fg-danger-strong: #7f1d1d;
+    /* Red 900 */
+
+    /* Backgrounds & Borders */
+    --color-neutral-secondary-medium: #f9fafb;
+    /* Gray 50 */
+    --color-default-medium: #d1d5db;
+    /* Gray 300 */
+
+    /* Radius */
+    --radius-base: 0.5rem;
+    --radius-xs: 0.25rem;
+}
+
+@layer utilities {
+
+    /* For Chrome, Safari, and Opera */
+    .custom-scrollbar::-webkit-scrollbar {
+        width: 10px;
+    }
+
+    .custom-scrollbar::-webkit-scrollbar-track {
+        background: #f1f1f1;
+        border-radius: 10px;
+    }
+
+    .custom-scrollbar::-webkit-scrollbar-thumb {
+        background: #888;
+        border-radius: 10px;
+    }
+
+    .custom-scrollbar::-webkit-scrollbar-thumb:hover {
+        background: #555;
+    }
+
+    /* For Firefox */
+    .custom-scrollbar {
+        scrollbar-width: thin;
+        scrollbar-color: #888 #f1f1f1;
+    }
+
+    .scrollbar-hidden::-webkit-scrollbar {
+        display: none;
+        /* Chrome, Safari, Opera */
+    }
+
+    .scrollbar-hidden {
+        -ms-overflow-style: none;
+        /* IE and Edge */
+        scrollbar-width: none;
+        /* Firefox */
+    }
+}
