@@ -1,14 +1,67 @@
 # CRUD Users - Laravel Livewire SPA
 
 <p align="center">
-    <img src="https://raw.githubusercontent.com/laravel/art/master/logo-lockup/5%20SVG/2%20CMYK/1%20Full%20Color/laravel-logolockup-cmyk-red.svg" width="400" alt="Laravel Logo">
+    <img src="https://raw.githubusercontent.com/laravel/art/master/logo-lockup/5%20SVG/2%20CMYK/1%20Full%20Color/laravel-logolockup-cmyk-red.svg" width="350" alt="Laravel Logo">
+    &nbsp;&nbsp;&nbsp;&nbsp;
+    <img src="https://laravel-livewire.com/img/logo.svg" width="120" alt="Livewire Logo">
 </p>
+
+<p align="center">
+    <strong>Laravel 11 + Livewire 3</strong><br>
+    <em>Full-stack development tanpa menulis JavaScript</em>
+</p>
+
+---
 
 Aplikasi **User Management System** yang dibangun dengan Laravel 11 dan Livewire 3, menerapkan arsitektur Single Page Application (SPA) dengan fokus pada performa, efisiensi, dan keterbacaan kode.
 
 ---
 
-## 📚 Dokumentasi Pembelajaran
+## ⚡ Fokus Pembelajaran: Livewire
+
+> **Livewire** adalah framework full-stack untuk Laravel yang membuat pengembangan antarmuka dinamis menjadi sederhana, tanpa perlu menulis JavaScript secara langsung.
+
+### Mengapa Livewire?
+
+| Keunggulan | Penjelasan |
+|------------|------------|
+| � **No JavaScript Required** | Interaktivitas penuh menggunakan PHP saja |
+| 🔄 **Real-time Updates** | Komponen update otomatis tanpa page refresh |
+| 📦 **Component-based** | Arsitektur komponen yang reusable |
+| 🎯 **Laravel Native** | Terintegrasi sempurna dengan ekosistem Laravel |
+| ⚡ **SPA Experience** | Navigasi cepat seperti Single Page Application |
+
+### Konsep Livewire yang Dipelajari
+
+```php
+// 1. Two-way Data Binding
+<input wire:model="search">  // Otomatis sync dengan property PHP
+
+// 2. Real-time Search dengan Debounce
+wire:model.live.debounce.100ms="search"  // Update setiap 100ms
+
+// 3. Event Dispatching antar Component
+$this->dispatch('confirm-delete', userId: $id);  // Kirim event
+#[On('confirm-delete')]                           // Terima event
+public function openModal(int $userId) { }
+
+// 4. Livewire Attributes (Modern Syntax)
+#[Validate('required|email')]  // Validasi declarative
+#[On('user-deleted')]          // Event listener
+#[Layout('layouts.app')]       // Full-page component layout
+
+// 5. File Uploads dengan Preview
+use WithFileUploads;
+$avatar->temporaryUrl();  // Preview sebelum upload
+
+// 6. Pagination Terintegrasi
+use WithPagination;
+$users->links('livewire.pagination');  // Custom pagination view
+```
+
+---
+
+## �📚 Dokumentasi Pembelajaran
 
 ### Perjalanan Project Ini
 
@@ -36,13 +89,13 @@ Project ini dimulai sebagai pembelajaran dasar Laravel Livewire untuk operasi CR
 
 ### Tech Stack
 
-```
-Laravel 11          → PHP Framework
-Livewire 3          → Full-stack SPA tanpa JavaScript
-Alpine.js           → Reactive micro-interactions
-Tailwind CSS        → Utility-first styling
-Vite                → Asset bundling
-```
+| Technology | Version | Purpose |
+|------------|---------|---------|
+| **Laravel** | 11.x | PHP Framework |
+| **Livewire** | 3.x | Full-stack SPA tanpa JavaScript |
+| **Alpine.js** | 3.x | Reactive micro-interactions |
+| **Tailwind CSS** | 4.x | Utility-first styling |
+| **Vite** | 6.x | Asset bundling |
 
 ### Struktur Komponen
 
