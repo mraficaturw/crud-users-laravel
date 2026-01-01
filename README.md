@@ -1,15 +1,23 @@
 # CRUD Users - Laravel Livewire SPA
 
-<p align="center">
-    <img src="https://raw.githubusercontent.com/laravel/art/master/logo-lockup/5%20SVG/2%20CMYK/1%20Full%20Color/laravel-logolockup-cmyk-red.svg" width="350" alt="Laravel Logo">
-    &nbsp;&nbsp;&nbsp;&nbsp;
-    <img src="https://laravel-livewire.com/img/logo.svg" width="120" alt="Livewire Logo">
-</p>
-
-<p align="center">
-    <strong>Laravel 11 + Livewire 3</strong><br>
-    <em>Full-stack development tanpa menulis JavaScript</em>
-</p>
+<div align="center">
+  <table>
+    <tr>
+      <td align="center" width="250" style="border: none;">
+        <img src="https://raw.githubusercontent.com/laravel/art/master/logo-lockup/5%20SVG/2%20CMYK/1%20Full%20Color/laravel-logolockup-cmyk-red.svg" width="100%" alt="Laravel Logo">
+      </td>
+      <td align="center" width="50" style="border: none;">
+        <span style="font-size: 30px;">+</span>
+      </td>
+      <td align="center" width="150" style="border: none;">
+        <img src="https://laravel-livewire.com/img/logo.svg" width="100%" alt="Livewire Logo">
+      </td>
+    </tr>
+  </table>
+  
+  <h3>Laravel 11 + Livewire 3</h3>
+  <p><em>Full-stack development tanpa menulis JavaScript</em></p>
+</div>
 
 ---
 
